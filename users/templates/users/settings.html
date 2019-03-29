@@ -1,0 +1,34 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block title %}个人信息设置{% endblock title %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'users/css/settings.css'%}">{% endblock css %}
+{% block content %}
+  <div class="settings">
+    <div class="settingsContent">
+      <div class="permissions">
+        <p>查询班级(仅管理员可见)</p>
+        <ul>
+          <li><p>一班</p></li>
+          <li><p>二班</p></li>
+          <li><p>三班</p></li>
+        </ul>
+      </div>
+      <div class="changePassword" style="display:none;">
+        <p id="changePasswordTitle">修改密码</p>
+        <form method="POST" action="#" class="settingsForm">
+          {% csrf_token %}
+          <p>请输入原密码:</p>
+          <input type="password" class="password" name="oldPassword1">
+          <p>请再次输入原密码:</p>
+          <input type="password" class="password" name="oldPassword2">
+          <p>输入新密码:</p>
+          <input type="password" class="password" name="newPassword">
+          <p id="submitButton">提交</p>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+{% block js %}
+
+{% endblock js %}

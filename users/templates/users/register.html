@@ -1,0 +1,28 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block content %}
+  <div class="errors">
+    {% if errors %}
+      {% for error in errors %}
+        <p style="color:red;">
+          {{ error }}
+        </p>
+      {% endfor %}
+    {% endif %}
+  </div>
+  <form action="{% url 'users:userRegister' %}" class="registerForm" method="POST"> 
+    {% csrf_token %}
+    <span>账号:</span>
+    <input class="username" type="text" name="account" required>
+    <span>昵称:</span>
+    <input class="name" type="text" name="name" required>
+    <span>第一次密码:</span>
+    <input class="password" type="password" name="password" required>
+    <span>第二次密码:</span>
+    <input class="password2" type="password" name="password2" required>
+    <span>邮箱:</span>
+    <input class="email" type="text" name="email" required>
+    <input class="submit" type="submit" name="submit" value="提交">
+  </form>
+  <script type="text/javascript" src="{% static 'users/scripts/register.js' %}"></script>
+{% endblock content %}

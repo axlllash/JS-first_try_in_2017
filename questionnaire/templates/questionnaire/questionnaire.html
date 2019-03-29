@@ -1,0 +1,55 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'questionnaire/css/questionnaire.css'%}">{% endblock css %}
+{% block title %}选书统计{% endblock title %}
+{% block content %}
+  <div class="questionnaire">
+    <div class="errors">
+      {% if errors %}
+        {% for error in errors %}
+          <p style="color:red;">
+            {{ error }}
+          </p>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="dataZone">
+      <p>书名</p>
+      <p>价格</p>
+      <p>折扣</p>
+      <p>是否选中</p>
+    </div>
+    <form class="questionForm" action="{% url 'questionnaire:experiment' %}" method="POST">
+      {% csrf_token %}
+      <div class="questionDiv">
+        <p class="questionId1">bookname1</p>
+        <p class="questionData11">bookprice1</p>
+        <p class="questionData12">bookdiscount1</p>
+        <div class="icon">
+          <i class="far fa-square"></i>
+        </div>
+        <input type="hidden" name="questionId1" value="0">
+      </div>
+      <div class="questionDiv">
+        <p class="questionId2">bookname2</p>
+        <p class="questionData21">bookprice2</p>
+        <p class="questionData22">bookdiscount2</p>
+        <div class="icon">
+          <i class="far fa-square"></i>
+        </div>
+        <input type="hidden" name="questionId2" value="0">
+      </div>
+      <div class="questionDiv">
+        <p class="questionId3">bookname3</p>
+        <p class="questionData31">bookprice3</p>
+        <p class="questionData32">bookdiscount3</p>
+        <div class="icon">
+          <i class="far fa-square"></i>
+        </div>
+        <input type="hidden" name="questionId3" value="0">
+      </div>
+      <p id="submitButton">提交</p>
+    </form>
+  </div>
+{% endblock content %}
+{% block js %}<script type="text/javascript" src="{% static 'questionnaire/scripts/questionnaire.js' %}"></script>{% endblock js %}

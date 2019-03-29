@@ -1,0 +1,153 @@
+@font-face{
+    src: url('../images/Share Tech regular.ttf');
+    font-family : shareTech;
+}
+* {
+    margin : 0;
+    padding : 0; 
+}
+.html{
+    width : 100%;
+    height : 100% 
+}
+body{
+    width : 100%;
+    height : 100%; 
+    background-color : rgb(250,250,250); 
+    font-family : shareTech,Sans-serif;
+}
+a{
+    text-decoration : none; 
+}
+li{
+    list-style-type : none; 
+}
+.placeholder{
+    width : 100%;
+    height : .407876rem;
+}
+.header{
+    width : 100%;
+    height : .407876rem;
+    overflow : visible;  
+    border-bottom : .01rem solid #aaa;
+    box-shadow : .1rem .1rem .2rem rgba(88,88,88,.1);
+    transition : .5s; 
+    z-index : 999; 
+    position : fixed;
+    background-color : #fff; 
+}
+.header:hover{
+    box-shadow : .1rem .1rem .2rem rgba(88,88,88,.5);
+    transition : .5s; 
+}
+.headerLogo{
+    float : left; 
+    margin : .1rem .2rem 0 .2rem;
+    width : .3rem;
+    height : .3rem;
+    transition : .5s; 
+}
+.headerLogo:hover{
+    transform : scale(1.2);
+    transition : .5s; 
+}
+.headerTitle{
+    color : #222;
+    text-decoration : none; 
+    margin-top : -.15rem;
+    float : left;
+    font-size : .2rem;
+    line-height : .8rem;
+    font-family : shareTech,Sans-serif;
+    transition : .5s; 
+}
+.headerTitle:hover{
+    color : #a11;
+    transition : .5s; 
+}
+.headerRight {
+    float : right;
+    padding-right : .2rem;
+    font-size : 0; 
+    margin-top : -.2rem;
+}
+.headerRight span{
+    font-size : .2rem; 
+    line-height : .9rem; 
+    font-family : shareTech,Sans-serif;
+    margin : 0 .05rem;
+}
+.menu{
+    position : relative;
+    display : inline-block; 
+    font-size : 0; 
+    width : auto;
+}
+.menu span{
+    margin : 0;
+    width : auto;
+}
+.menuContent{
+    height : 0;
+    position : absolute;
+    background-color : #fff;
+    width : .5rem;
+    top : 65%;
+    left : 50%; 
+    margin-left : -.25rem;
+    font-size : 0;
+    transition : .5s; 
+    line-height : 0;
+    overflow : hidden;  
+    opacity : 0; 
+
+}
+.menuContent li{
+    line-height : .2rem;
+    text-align : center;
+    margin-top : .05rem; 
+}
+.menuContent a{
+    font-size : .16rem;
+    font-family : shareTech,Sans-serif;
+    text-decoration : none;
+    color : #000; 
+    margin : auto;
+}
+.menuContent a:hover{
+    color : #888;
+}
+.menu:hover .menuContent{
+    opacity : 1; 
+    width : .5rem;
+    top : 65%;
+    left : 50%; 
+    margin-left : -.25rem;
+    height : .6rem;
+    display : block;
+    transition : .5s; 
+    overflow : hidden;
+    line-height : 0; 
+    box-shadow : .1rem .1rem .2rem rgba(88,88,88,.5);
+    border-radius : .1rem; 
+}
+.baseUsername{
+    transition : .5s; 
+    color : #a11;
+    font-weight : bold;
+    text-decoration : underline; 
+}
+.menu:hover .baseUsername{
+    color : #808;
+    transition : .5s; 
+}
+.loginNow {
+    text-decoration : none; 
+    color : #a11;
+    transition : .5s; 
+}
+.loginNow:hover {
+    color : #808;
+    transition : .5s; 
+}

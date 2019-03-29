@@ -1,0 +1,110 @@
+.settings{
+    background-color : #fff; 
+    width : 13.12rem;
+    margin : .2rem .95667rem 0 .95667rem;
+    height : 100%;
+    border-radius : .2rem;
+    box-shadow : .1rem .1rem .2rem rgba(88,88,88,.1);
+    transition : .5s; 
+    padding-top : .2rem;  
+}
+.settings:hover{
+    box-shadow : .1rem .1rem .2rem rgba(88,88,88,.3);
+    transition : .5s; 
+}
+.settingsContent{
+    width : auto;
+    margin: 0 .95667rem;
+    height : 100%;
+}
+.changePassword{
+    width : 100%;
+    height : 100%;
+}
+#changePasswordTitle{
+    font-size : .3rem;
+    line-height : .4rem;  
+    color : #888;
+    position : relative;
+    width : 1.2rem; 
+    font-weight : bold;
+    opacity : 0;
+    transition : .5s;  
+}
+.settings:hover #changePasswordTitle{
+    opacity : 1; 
+    transition : .5s; 
+}
+.settings #changePasswordTitle::before{
+    left : -.2rem;
+    bottom : 0;
+    width : 8.10816rem;
+    content : "";
+    position : absolute;
+    height : .01rem;
+    background-color : #aaa;
+    transition : .5s;
+    transform : scaleX(0);
+    transform-origin : 0 100%;     
+}
+#changePasswordTitle::after{
+    left : -.05rem;
+    top : 0;
+    width : .01rem;
+    content : "";
+    height : 4.063968rem;
+    transition : .5s;
+    background-color : #aaa;
+    position : absolute;  
+    transform : scaleY(0);  
+    transform-origin : 0 0;
+}
+.settings:hover #changePasswordTitle::before{
+    transform : scaleX(1);
+    transition : .5s; 
+}
+.settings:hover #changePasswordTitle::after{
+    transform : scaleY(1);
+    transition : .5s; 
+}
+.settingsForm{
+    width : 100%;
+    height : 100%;
+    font-size : 0; 
+}
+.settingsForm p{
+    color : #aaa;
+    font-size : .2rem;
+    line-height : .4rem;  
+    margin : .3rem auto 0 auto;  
+}
+.settingsForm input{
+    height : .3rem; 
+    line-height : .3rem;
+    margin : .1rem auto 0 auto;  
+}
+.settingsForm p,.settingsForm input{
+    display : block; 
+    width : 3rem;
+}
+.permissions p{
+    color : #aaa;
+    font-size : .2rem;
+    line-height : .4rem;   
+}
+#submitButton{
+    font-size : .2rem;
+    line-height : .3rem;   
+    border : .03rem solid #aaa;
+    border-radius : .2rem;
+    width : 1.5rem;
+    margin : 2rem auto .2rem auto;
+    text-align : center; 
+    float : none;
+    transition : .5s; 
+}
+#submitButton:hover{
+    color : rgb(0,229,238);
+    transition : .5s; 
+    border : .03rem solid rgb(0,229,238);
+}

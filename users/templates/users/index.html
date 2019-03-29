@@ -1,0 +1,122 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block title %}首页{% endblock title %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'users/css/index.css'%}">{% endblock css %}
+{% block content %}
+<div class="container"></div>
+<div class="background"></div>
+<div class="hello">
+  <div class="hellozone">
+    <p class="p1">Hi!</p>
+    <p class="p2">我的猫不可能这么可爱</p>
+  </div>
+  <p class="p3">ฅ՞•ﻌ•՞ฅ</p>
+</div>
+<div class="contentDiv">
+  <div class="contentTop">
+    <ul>
+      <li class="li1 CTclick">快速导航</li>
+      <li class="li2">关于本站</li>
+    </ul>
+    <div class="logos">
+      <i class="fab fa-qq"><div><img src="{% static 'users/images/二维码.jpg' %}"/></div></i>
+      <i class="fab fa-weixin"><div><img src="{% static 'users/images/二维码.jpg' %}"/></div></i>
+      <i class="fab fa-weibo"><div><img src="{% static 'users/images/二维码.jpg' %}"/></div></i>
+      <i class="fab fa-github"><div><img src="{% static 'users/images/二维码.jpg' %}"/></div></i>
+    </div>
+  </div>
+  <div class="content">
+    <div class="content1 CTV">
+      <ul>
+        <li class="ctl1">
+          <div class="leftLogos">
+            <ul>
+              <li class="lL1">
+                <a href="#">
+                  <img src="{% static 'users/images/社交.png' %}" />
+                  <span>猫の论坛</span>
+                </a>
+              </li>
+              <li class="lL2">
+                <a href="#">
+                  <img src="{% static 'users/images/医疗.png' %}" />
+                  <span>猫の医院</span>
+                </a>
+              </li>
+              <li class="lL3">
+                <a href="#">
+                  <img src="{% static 'users/images/购物车.png' %}" />
+                  <span>猫の商店</span>
+                </a>
+              </li>
+              <li class="lL4">
+                <a href="#">
+                  <img src="{% static 'users/images/档案.png' %}" />
+                  <span>猫の寄养</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="news">
+            <p>喵站大小事</p><span><img src="{% static 'users/images/新闻.png' %}"/></span>
+            <ul>
+             <li><a href="{% url 'questionnaire:questionPage' %}">投票这是第一个链接投票这是第一个链接投票这是第一个链接投票这是第一个链接投票这是第一个链接投票这是第一个链接</a></li>
+             <li><a href="#">这是第二条链接</a></li>
+             <li><a href="#">这是第三条链接</a></li>
+             <li><a href="#">这是第四条链接</a></li>
+             <li><a href="#">这是第五条链接</a></li>
+             <li><a href="#">这是第六条链接</a></li>
+             <li><a href="#">这是第七条链接</a></li>
+             <li><a href="#">这是第八条链接</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="ctl2">
+          <div class="imgZone">
+          </div>
+          <div class="textZone">
+            <h2>猫の论坛</h2>
+            <p>XXXXXXXXXXXXXXXXXXX的论坛</p>
+            <div class="hiddenDiv"><a href="#"><i class="fas fa-angle-double-right"></i><p>进入板块</p></a></div>
+          </div>
+        </li>
+        <li class="ctl3">
+          <div class="imgZone">
+          </div>
+          <div class="textZone">
+            <h2>猫の医院</h2>
+            <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX这里可以XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX这里可以XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+            <div class="hiddenDiv"><a href="#"><i class="fas fa-angle-double-right"></i><p>进入板块</p></a></div>
+          </div>
+        </li>
+        <li class="ctl4">
+          <div class="imgZone">
+          </div>
+          <div class="textZone">
+            <h2>猫の商店</h2>
+            <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+            <div class="hiddenDiv"><a href="#"><i class="fas fa-angle-double-right"></i><p>进入板块</p></a></div>
+          </div>
+        </li>
+        <li class="ctl5">
+          <div class="imgZone">
+          </div>
+          <div class="textZone">
+            <h2>猫の寄养</h2>
+            <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+            <div class="hiddenDiv"><a href="#"><i class="fas fa-angle-double-right"></i><p>进入板块</p></a></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="content2">
+      <div class="webTips">
+        <p>    我从小就喜欢猫，一直想要猫，但是因为各种原因始终没有猫，这么多年我都跟自己说，会有猫的。现在口口声声说喜欢猫的人太多，也有许多人买了猫，但是有部分人确实是一时兴起，完全没有必要的知识，反倒害了喵主子。有人觉得绝育是很过分很残忍；有人甚至觉得猫粮喂全素的最好。开玩笑啊，猫要肉和鱼啊！挺多猫因为仆人们喂素食，健康堪忧啊。因此，真的最好有一个平台，能够整合相关知识，比如猫粮怎么搭。后期还可以接入寄养啊急救啊买优选粮等等服务，这一举颠覆了在群里问怎么养猫的不靠谱行为，对猫主子负责，也是对仆人们负责。我从小就喜欢猫，一直想要猫，但是因为各种原因始终没有猫，这么多年我都跟自己说，会有猫的。现在口口声声说喜欢猫的人太多，也有许多人买了猫，但是有部分人确实是一时兴起，完全没有必要的知识，反倒害了喵主子。有人觉得绝育是很过分很残忍；有人甚至觉得猫粮喂全素的最好。开玩笑啊，猫要肉和鱼啊！挺多猫因为仆人们喂素食，健康堪忧啊。因此，真的最好有一个平台，能够整合相关知识，比如猫粮怎么搭。后期还可以接入寄养啊急救啊买优选粮等等服务，这一举颠覆了在群里问怎么养猫的不靠谱行为，对猫主子负责，也是对仆人们负责。我从小就喜欢猫，一直想要猫，但是因为各种原因始终没有猫，这么多年我都跟自己说，会有猫的。现在口口声声说喜欢猫的人太多，也有许多人买了猫，但是有部分人确实是一时兴起，完全没有必要的知识，反倒害了喵主子。有人觉得绝育是很过分很残忍；有人甚至觉得猫粮喂全素的最好。开玩笑啊，猫要肉和鱼啊！挺多猫因为仆人们喂素食，健康堪忧啊。因此，真的最好有一个平台，能够整合相关知识，比如猫粮怎么搭。后期还可以接入寄养啊急救啊买优选粮等等服务，这一举颠覆了在群里问怎么养猫的不靠谱行为，对猫主子负责，也是对仆人们负责。我从小就喜欢猫，一直想要猫，但是因为各种原因始终没有猫，这么多年我都跟自己说，会有猫的。现在口口声声说喜欢猫的人太多，也有许多人买了猫，但是有部分人确实是一时兴起，完全没有必要的知识，反倒害了喵主子。有人觉得绝育是很过分很残忍；有人甚至觉得猫粮喂全素的最好。开玩笑啊，猫要肉和鱼啊！挺多猫因为仆人们喂素食，健康堪忧啊。因此，真的最好有一个平台，能够整合相关知识，比如猫粮怎么搭。后期还可以接入寄养啊急救啊买优选粮等等服务，这一举颠覆了在群里问怎么养猫的不靠谱行为，对猫主子负责，也是对仆人们负责。</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+{% block js %}
+<script type="text/javascript" src="{% static 'users/scripts/index.js' %}"></script>
+{% endblock js %}

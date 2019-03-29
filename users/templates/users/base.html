@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/all.min.css' %}">
+    {% block css %}{% endblock css %}
+    <script type="text/javascript">document.documentElement.style.fontSize=(window.screen.width/1536*625)+"%";document.documentElement.style.visibility="hidden";document.onreadystatechange=function(){if(document.readyState=="complete"){document.documentElement.style.visibility="visible";}}</script>
+  </head> 
+<body>
+  <div class="header">
+    <img class="headerLogo" title="logo" src="{% static 'users/images/个人.png' %}" />
+    {% if user.is_authenticated %}
+      <a class="headerTitle" href="{% url 'users:index' %}">我的猫不可能这么可爱</a>
+    {% else %}
+      <a class="headerTitle" href="{% url 'users:loginIndex' %}">我的猫不可能这么可爱</a>
+    {% endif %}
+    <div class="headerRight">
+      {% if userid %}
+        <span>Hi,</span>
+        <div class="menu">
+          <span class="baseUsername">{{ userid }} : {{ username }}</span>
+            <ul class="menuContent">
+              <li>
+                <a href="{% url 'users:userSettings' %}">信息</a>
+              </li>
+              <li>
+                <a href="{% url 'users:userLogout' %}">注销</a>
+              </li>
+            </ul>
+        </div>
+        <span>!</span>
+      {% else %}
+        <span class="loginNow">Login Now</span>
+      {% endif %}
+    </div>
+  </div>
+  <div class="placeholder"></div>
+  {% block content %}{% endblock content %}
+  <script type="text/javascript" src="{% static 'users/scripts/base.js' %}"></script>
+  {% block js %}{% endblock js %}
+</body>

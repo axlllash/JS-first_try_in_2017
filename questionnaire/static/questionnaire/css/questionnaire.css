@@ -1,0 +1,75 @@
+.questionnaire{
+    background-color : #fff; 
+    width : 13.12rem;
+    margin : .147185rem auto .2rem auto;
+    height : auto;
+    border-radius : .2rem;
+    box-shadow : .1rem .1rem .2rem rgba(88,88,88,.1);
+    transition : .5s; 
+}
+.questionnaire:hover{
+    box-shadow : .1rem .1rem .2rem rgba(88,88,88,.3);
+    transition : .5s; 
+}
+.questionDiv{
+    margin:.2rem 0;
+    overflow : hidden;
+    border-radius : .2rem;
+    transition : .5s; 
+}
+.questionDiv:hover{
+    box-shadow : .1rem .1rem .2rem rgba(88,88,88,.1); 
+    background-color : rgb(250,250,250); 
+    transition : .5s; 
+}
+.dataZone{
+    width : auto;
+    margin : .2rem .95667rem 0 .95667rem;
+    overflow : hidden; 
+    border-bottom : .01rem solid #aaa;
+    color : #888;
+}
+.dataZone p,.questionDiv p,.icon i{
+    width : 25%;
+    font-size : .2em;
+    line-height : .4rem;  
+    display : inline-block;
+    float : left;
+    text-align : center; 
+}
+.dataZone p{
+    font-weight : bold; 
+}
+.icon i{
+    width : .4rem;
+    margin-left : 1.2008rem;
+    font-size : .4rem;
+    line-height : .4rem;
+    transition : .5s;  
+}
+.icon i:hover{
+    color : rgb(0,229,238);
+    transition : .5s; 
+}
+.questionForm{
+    width : auto;
+    margin : 0 .95667rem;
+    color : #aaa;
+    overflow : hidden;  
+}
+#submitButton{
+    font-size : .2rem;
+    line-height : .3rem;   
+    border : .03rem solid #aaa;
+    border-radius : .2rem;
+    width : 1.5rem;
+    margin : 0 auto .2rem auto;
+    text-align : center; 
+    float : none;
+    transition : .5s; 
+}
+#submitButton:hover{
+    color : rgb(0,229,238);
+    transition : .5s; 
+    border : .03rem solid rgb(0,229,238);
+}

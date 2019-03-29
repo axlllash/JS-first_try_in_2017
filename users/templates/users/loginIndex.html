@@ -1,0 +1,55 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% block title %}登陆{% endblock title %}
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'users/css/loginIndex.css'%}">
+{% endblock css %}\
+{% block content %}
+  <div class="loginIndexContent">
+    <div class="slide">
+      <ul class="pictures">
+        <li class="picture1"></li>
+        <li class="picture2"></li>
+        <li class="picture3"></li>
+        <li class="picture4"></li>
+        <li class="picture5"></li>
+      </ul>
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="rightContent">
+      <img class="loginImg" src="{% static 'users/images/猫.png' %}" />
+      <form action="{% url 'users:userLogin' %}" class="loginForm" method="POST">
+        <div class="errors">
+          {% if errors %}
+            {% for error in errors %}
+              <p>{{ error }}</p>
+            {% endfor %}
+          {% endif %}
+        </div>
+        {% csrf_token %}
+  		  <p class="pusername">Username</p>
+        <input class="username" type="text" name="account" value='' required autocomplete="on" />
+        <p class="error1">请输入账号</p>
+        <p class="ppassword">Password</p>
+  	   	<input class="password" type="password" name="password" value='' required autocomplete="on" />
+        <p class="error2">请输入密码</p>
+  	    <div class="logos">
+  		  <a href="#"><img src="{% static 'users/images/icon_github.png' %}" /></a>
+  		  <a href="#"><img src="{% static 'users/images/QQ.png' %}" /></a>
+  		  <a href="#"><img src="{% static 'users/images/微博.png' %}" /></a>
+            <a href="#">
+  		  <img src="{% static 'users/images/微信.png' %}" /></a>
+  	    </div>
+  	    <a href="#" class="login">Log In</a>
+  	  </form>
+    </div>
+  </div>
+{% endblock content %}
+{% block js %}
+<script type="text/javascript" src="{% static 'users/scripts/loginIndex.js' %}"></script>
+{% endblock js %}
